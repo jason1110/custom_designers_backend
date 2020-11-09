@@ -8,7 +8,7 @@ exports.seed = async knex => {
   await knex("user").insert([{
     id: 1,
     email: "test@gmail.com",
-    password_digest: "password"
+    password: "password"
   }])
   await knex("product").insert([{
     id: 1,
