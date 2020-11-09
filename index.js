@@ -97,7 +97,7 @@ app.post("/login", (request, response) => {
         if(!arePasswordsTheSame) throw new Error("invalid credentials")
         
         const payload = { email: user.email}
-        const secret = "SECRETCODE"
+        // add secret code here
 
         jwt.sign(payload, secret, (error, token) => {
             if (error) throw new Error("unable to login")
@@ -124,7 +124,7 @@ app.get('/products', (_,response) => {
 function authenticate(request, response, next){
     const authHeader = request.get("Authorization")
     const token = authHeader.split(" ")[1]
-    const secret = "SECRETCODE"
+    //add secret code here
     jwt.verify(token, secret, (error, payload) => {
         if (error) response.json({ error: error.message })
 
