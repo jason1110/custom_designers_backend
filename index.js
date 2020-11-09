@@ -71,8 +71,8 @@ app.post('/users', (request, response) => {
                 }).returning("*")
         })
         .then (users => {
-            const user = users[0]
-            response.json({ user })
+            const showUser = users
+            response.json({ user: showUser })
         }).catch(error => {
             response.json({error: error.message})
         })
