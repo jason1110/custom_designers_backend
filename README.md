@@ -5,14 +5,14 @@ Wear your Words! Show your Colors! Share your Style!
 # System technology and dependencies
 
 Node JS with the following dependencies:
-"bcrypt": "^5.0.0",
-"cors": "^2.8.5",
-"express": "^4.17.1",
-"jsonwebtoken": "^8.5.1",
-"knex": "^0.21.12",
-"nodemon": "^2.0.6",
-"objection": "^2.2.3",
-"pg": "^8.4.2"
+* "bcrypt": "^5.0.0",
+* "cors": "^2.8.5",
+* "express": "^4.17.1",
+* "jsonwebtoken": "^8.5.1",
+* "knex": "^0.21.12",
+* "nodemon": "^2.0.6",
+* "objection": "^2.2.3",
+* "pg": "^8.4.2"
 
 # Initial Config
   `npm install`
