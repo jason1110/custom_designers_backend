@@ -42,7 +42,7 @@ Node JS with the following dependencies:
 * Run the command: npx knex migrate:latest
 * Run the command: npx knex seed:run
 
-# run the backend
+# Start the backend
 * to use nodemon run the command: `npm run dev`
 * to use node run the command: `npm start`
 
