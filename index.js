@@ -39,7 +39,6 @@ class User extends Model {
     }
 }
 
-
 app.get('/users', (_,response) => {
     User.query().withGraphFetched('products')
     .then (users => {
@@ -78,7 +77,6 @@ app.post('/users', (request, response) => {
         })
 })
 
-
 app.post("/login", (request, response) => {
     const { user } = request.body
     User.query()
@@ -113,11 +111,37 @@ app.get("/welcome", authenticate, (request, response) => {
 response.json({ message: `${request.user.email} Successfully logged in`})
 })
 
-
 app.get('/products', (_,response) => {
     Product.query()
     .then (products => {
         response.json({ products })
+    })
+})
+
+app.get('/products/:id', (request,response) => {
+    Product.query()
+    .where('id', request.params.id)
+    .then(products => response.json(products[0]))
+    .catch(error => {
+        response.json({ error: error.message })
+    });
+})
+
+app.post('/products', (request, response) => {
+    const { product } = request.body
+            .insert({
+                id: product.id,
+                name: product.email,
+                product_type: product.product_type,
+                size: product.size,
+                color: product.color,
+                text: product.text,
+                }).returning("*")
+    .then (products => {
+        const showProduct = products
+        response.json({ product: showProduct })
+    }).catch(error => {
+        response.json({error: error.message})
     })
 })
 
