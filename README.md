@@ -28,7 +28,7 @@ Node JS with the following dependencies:
 # Database creation
   create PostGreSQL datatbases with `createdb custom_designer_db`
 
-  in the knexfile.js configure the development section as follows
+  in the knexfile.js verify that the client is pg and the connection is pointing to your database:
  ```
  module.exports = {
 
@@ -42,7 +42,8 @@ Node JS with the following dependencies:
 * Run the command: npx knex migrate:latest
 * Run the command: npx knex seed:run
 
-
-* Run the command: npm start
+# run the backend
+* to use nodemon run the command: `npm run dev`
+* to use node run the command: `npm start`
 
 
