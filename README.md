@@ -15,15 +15,15 @@ Node JS with the following dependencies:
 * "pg": "^8.4.2"
 
 # Initial Config
-  `npm install`
-    express
-    nodemon
-    knex
-    objection
-    cors
-    bcrypt
-    jsonwebtoken
-    pg
+  intall the following packages with `npm install`
+   * express
+   * nodemon
+   * knex
+   * objection
+   * cors
+   * bcrypt
+   * jsonwebtoken
+   * pg
 
 # Database creation
   create PostGreSQL datatbases with `createdb custom_designer_db`
