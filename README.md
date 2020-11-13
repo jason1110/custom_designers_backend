@@ -1,19 +1,48 @@
-# custom_designers_backend
+# Custom Label Backend
 
-Things you may want to cover:
+Wear your Words! Show your Colors! Share your Style!
 
-* Ruby version
+# System technology and dependencies
 
-* System dependencies
+Node JS with the following dependencies:
+"bcrypt": "^5.0.0",
+"cors": "^2.8.5",
+"express": "^4.17.1",
+"jsonwebtoken": "^8.5.1",
+"knex": "^0.21.12",
+"nodemon": "^2.0.6",
+"objection": "^2.2.3",
+"pg": "^8.4.2"
 
-* Configuration
+# Initial Config
+  `npm install`
+    express
+    nodemon
+    knex
+    objection
+    cors
+    bcrypt
+    jsonwebtoken
+    pg
 
-* Database creation
+# Database creation
+  create PostGreSQL datatbases with `createdb custom_designer_db`
 
-* Database initialization
+  in the knexfile.js configure the development section as follows
+ ```
+ module.exports = {
 
-* How to run the test suite
+  development: {
+    client: 'pg',
+    connection: 'postgres:///custom_designer_db'
+  },
+};
+```
+# Database initialization
+* Run the command: npx knex migrate:latest
+* Run the command: npx knex seed:run
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* Run the command: npm start
+
+
